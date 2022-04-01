@@ -89,8 +89,8 @@ let Register = async () => {
 
     };
     register_data = JSON.stringify(register_data)
-    console.log(' register_data', register_data);
-    let res = await fetch("https://masai-api-mocker.herokuapp.com/auth/register", {
+    // console.log(' register_data', register_data);
+    let res = await fetch("https://apilybrate.herokuapp.com/register", {
 
         method: 'POST',
 
@@ -103,8 +103,8 @@ let Register = async () => {
 
     let data = await res.json();
     console.log(data)
-    if(data.error==false){
-        alert(data.message);
+    if(data.token){
+        
         location.reload()
     }else{
         alert(data.message)
@@ -125,7 +125,7 @@ let Login = async () => {
 
     let login_data_json = JSON.stringify(login_data);
 
-    let res = await fetch("https://masai-api-mocker.herokuapp.com/auth/login", {
+    let res = await fetch("https://apilybrate.herokuapp.com/login", {
         method: 'POST',
 
         body: login_data_json,
@@ -136,12 +136,13 @@ let Login = async () => {
     });
 
     let data = await res.json();
-   console.log(data)
-    if(data.error==false){
-        alert("Login Succesfull");
+   
+    if(data.token!=undefined){
         
-       getUser(login_data.username, data.token);
-     
+        alert("Login Succesfull");
+        // console.log(data)
+    //    getUser(login_data.username);
+    localStorage.setItem("loginData",data)
         isLogin =true;
         localStorage.setItem("isLogin",isLogin);
         
@@ -154,7 +155,7 @@ let Login = async () => {
         btn.setAttribute("class","signIn")
         document.querySelector(".form-type-1").append(btn)
         
-        // location.href="goodkart.html"
+        location.href="goodkart.html"
     }else{
         alert(data.message);
         isLogin=false;
@@ -169,25 +170,25 @@ let Login = async () => {
     }
 };
 
-let getUser = async (username, token) => {
+// let getUser = async (username, token) => {
 
-try{
+// try{
 
-  let res = await fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`,{
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-  });
+//   let res = await fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`,{
+//     headers: {
+//       "Content-Type": "application/json",
+//       Authorization: `Bearer ${token}`,
+//     },
+//   });
 
-  let data = await res.json();
-  localStorage.setItem("loginData",JSON.stringify(data))
+//   let data = await res.json();
+//   localStorage.setItem("loginData",JSON.stringify(data))
   
-}
-catch(err){
-  console.log("err:", err);
-}
-};
+// }
+// catch(err){
+//   console.log("err:", err);
+// }
+// };
 
     
 
