@@ -75,123 +75,150 @@ import {displayContent, sort} from "./scripts/categoryAppendSort.js"
 import footer from "./components/footer.js"
     document.getElementById("footer").innerHTML=footer();
 
-var VitaminAndSupplement = [
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/gangakshi/updt/g_cordial_v1.png",
-        name : "Gangakshi G Cordial Vedic Syrup 200ml",
-        des : "G Cordial Vedic Syrup is a herbal concoction of pure ayurvedic herbs and is strongly effective against all types of women's related problems. It is a natural and safe product that guarantees 100% results.",
-        price : 160.00,
-        strprice :200.00 ,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/onelife/olmp_bone_bliss.jpg",
-        name : "Onelife Bone Bliss (60 Tablets)",
-        des : "Onelife Bone Bliss Calcium Tablets are important for bone health for men and women of all ages. It consists of calcium along with other active bone nutrients such as Vitamin D, Zinc.",
-        price :449.00,
-        strprice : 949.00,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/dnpl/insulatwin_v1.png",
-        name : "DNPL Insula Twin 30 Capsules",
-        des : "An increase in blood sugar levels is one of the most common problems faced by working adults these days. Insula twin capsules are a natural solution to reduce the level of blood sugar without any side effects.",
-        price : 360.00,
-        strprice : 450.00,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2284_PD_Image1.jpg",
-        name : "Ayur Defence AV 20 Tablet",
-        des : "Ayur Defence-AV acts as a Bronchodilator, Immunomodulator, Antimicrobial, Antiviral, Anti-allergic, Anti-inflammatory, Antipyretic, Analgesic, Antioxidant Antitussive and Antihistamine.",
-        price :249.00,
-        strprice :270.00 ,
-       },
-        {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/namyaa/lot2/qraa_liverstrong_v1.png",
-        name : "Qraa Men Liver Strong Capsules 30 Capsules",
-        des : "Qraa Men Liver Strong Capsule is an effective well-renowned natural therapy that is a power-packed formula derived by combining Ayurveda along with modern science. It acts as a natural supplement for the overall health and wellness of our vital organ Liver.",
-        price :279.00 ,
-        strprice : 349.00,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/mahaguru/healthup_v1.png",
-        name : "NavGrah Health Up Immunity For Incurable Disease - 30 Capsules",
-        des : "NavGrah Immunity Regain - Health Up capsules helps protect the body from various diseases and infections. They also assist in maintaining body weight, blood pressure, digestion, body growth, healthy cholesterol, and many other aspects of your well-being.",
-        price : 585.00,
-        strprice : 650.00,
+// var VitaminAndSupplement = [
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/gangakshi/updt/g_cordial_v1.png",
+//         name : "Gangakshi G Cordial Vedic Syrup 200ml",
+//         des : "G Cordial Vedic Syrup is a herbal concoction of pure ayurvedic herbs and is strongly effective against all types of women's related problems. It is a natural and safe product that guarantees 100% results.",
+//         price : 160.00,
+//         strprice :200.00 ,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/onelife/olmp_bone_bliss.jpg",
+//         name : "Onelife Bone Bliss (60 Tablets)",
+//         des : "Onelife Bone Bliss Calcium Tablets are important for bone health for men and women of all ages. It consists of calcium along with other active bone nutrients such as Vitamin D, Zinc.",
+//         price :449.00,
+//         strprice : 949.00,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/dnpl/insulatwin_v1.png",
+//         name : "DNPL Insula Twin 30 Capsules",
+//         des : "An increase in blood sugar levels is one of the most common problems faced by working adults these days. Insula twin capsules are a natural solution to reduce the level of blood sugar without any side effects.",
+//         price : 360.00,
+//         strprice : 450.00,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2284_PD_Image1.jpg",
+//         name : "Ayur Defence AV 20 Tablet",
+//         des : "Ayur Defence-AV acts as a Bronchodilator, Immunomodulator, Antimicrobial, Antiviral, Anti-allergic, Anti-inflammatory, Antipyretic, Analgesic, Antioxidant Antitussive and Antihistamine.",
+//         price :249.00,
+//         strprice :270.00 ,
+//        },
+//         {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/namyaa/lot2/qraa_liverstrong_v1.png",
+//         name : "Qraa Men Liver Strong Capsules 30 Capsules",
+//         des : "Qraa Men Liver Strong Capsule is an effective well-renowned natural therapy that is a power-packed formula derived by combining Ayurveda along with modern science. It acts as a natural supplement for the overall health and wellness of our vital organ Liver.",
+//         price :279.00 ,
+//         strprice : 349.00,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/mahaguru/healthup_v1.png",
+//         name : "NavGrah Health Up Immunity For Incurable Disease - 30 Capsules",
+//         des : "NavGrah Immunity Regain - Health Up capsules helps protect the body from various diseases and infections. They also assist in maintaining body weight, blood pressure, digestion, body growth, healthy cholesterol, and many other aspects of your well-being.",
+//         price : 585.00,
+//         strprice : 650.00,
     
-    },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2143_PD_Image1.jpg",
-        name : "Pyrexofly (30 capsules)",
-        des : "Pyrexofly is the best Ayurvedic medicine in India for chronic fever, pain and inflammation in the body. It acts as the best Ayurvedic medicine for fever.",
-        price :210.00 ,
-        strprice : 250.00,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white//rio/800x800/Haironic1_v10.jpg",
-        name : "Healthvit Haironic - Women Hair Growth Supplement - 60 Tablets",
-        des : "Keep your tresses nourished and healthy by consuming HealthVit hair growth supplement tablets on a regular basis.",
-        price : 299.00,
-        strprice : 400.00,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2102_PD_Image1.jpg",
-        name : "Corcal (10 Tablets)",
-        des : "Corcal is a unique calcium supplement specially made for women made from 100% natural coral grains. It is clinically proven for maintaining skin glow, reduce hairfall, strong nails and bones.",
-        price : 99.00,
-        strprice : 105.00,
-       },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2195_PD_Image1.jpg",
-        name : "Aptivate 175 ML",
-        des : "It helps in increasing the appetite of the children . It also helps in maintaining healthy immune system and also promotes digestion and relieves congestion .",
-        price : 99.00,
-        strprice : 126.00,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/maharishiayurveda/2021-03-03/Pirant_oil_v1.jpg",
-        name : "Pirant Oil For Joint Pain 50ml",
-        des : "Pirant oil is an Ayurvedic proprietary medicine that provides relief in acute and chronic joints inflammation, neutralizes the toxic effect of Ama(basic cause of joint inflammation).",
-        price :150.00 ,
-        strprice : 170.00,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/800x800/Lybrate_Covid-Care-Package_Banner_1.jpg",
-        name : "Covid Care Plan",
-        des : "Talk to our doctors about Self Care at home to prevent or recover from Covid-19 via text or audio calls for 14 days.",
-        price : 699.00,
-        strprice : 1000.00,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2286_PD_Image1.jpg",
-        name : "Menopause Support (60 Capsules)",
-        des : "This product incorporates natural soy isoflavones to provide holistic supplementation for a woman’s midlife years.",
-        price : 500.00,
-        strprice : 540.00,
-       },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/navgrah/diabcure_m_v1.png",
-        name : "Diabcure Morning 30 Capsules",
-        des : "Men with diabetes may have a decreased sex drive, ED & poor muscle strength. Women with diabetes can have symptoms such as UTI, dry, itchy skin. Diabcure Morning Capsules help keep the sugar levels balanced and keep you active the whole day.",
-        price : 630.00,
-        strprice : 700.00,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/namhya/lungs_cleanse_v1.png",
-        name : "Namhya Lung Cleanse Tea 100g",
-        des : "In our daily lifestyle, we often forget to take care of ourselves. Namhya has come off with a range of herbal teas that are made with ancient Indian recipes and packed with natural herbs to improve your overall health with just a sip.",
-        price : 349.00,
-        strprice :589.00 ,
-        },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2273_PD_Image1.jpg",
-        name : "Navgrah Immunity Builder Drops (30 ml)",
-        des : "NavGrah Immunity Builder Drops contain ayurvedic herbs which help in building strong immunity. It has coupled the study of both Astrology and Ayurveda with Modern Medical Science to bring the maximum out of this product.",
-        price : 399.00,
-        strprice : 499.00,
-        },
-]
+//     },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2143_PD_Image1.jpg",
+//         name : "Pyrexofly (30 capsules)",
+//         des : "Pyrexofly is the best Ayurvedic medicine in India for chronic fever, pain and inflammation in the body. It acts as the best Ayurvedic medicine for fever.",
+//         price :210.00 ,
+//         strprice : 250.00,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white//rio/800x800/Haironic1_v10.jpg",
+//         name : "Healthvit Haironic - Women Hair Growth Supplement - 60 Tablets",
+//         des : "Keep your tresses nourished and healthy by consuming HealthVit hair growth supplement tablets on a regular basis.",
+//         price : 299.00,
+//         strprice : 400.00,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2102_PD_Image1.jpg",
+//         name : "Corcal (10 Tablets)",
+//         des : "Corcal is a unique calcium supplement specially made for women made from 100% natural coral grains. It is clinically proven for maintaining skin glow, reduce hairfall, strong nails and bones.",
+//         price : 99.00,
+//         strprice : 105.00,
+//        },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2195_PD_Image1.jpg",
+//         name : "Aptivate 175 ML",
+//         des : "It helps in increasing the appetite of the children . It also helps in maintaining healthy immune system and also promotes digestion and relieves congestion .",
+//         price : 99.00,
+//         strprice : 126.00,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/maharishiayurveda/2021-03-03/Pirant_oil_v1.jpg",
+//         name : "Pirant Oil For Joint Pain 50ml",
+//         des : "Pirant oil is an Ayurvedic proprietary medicine that provides relief in acute and chronic joints inflammation, neutralizes the toxic effect of Ama(basic cause of joint inflammation).",
+//         price :150.00 ,
+//         strprice : 170.00,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/800x800/Lybrate_Covid-Care-Package_Banner_1.jpg",
+//         name : "Covid Care Plan",
+//         des : "Talk to our doctors about Self Care at home to prevent or recover from Covid-19 via text or audio calls for 14 days.",
+//         price : 699.00,
+//         strprice : 1000.00,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2286_PD_Image1.jpg",
+//         name : "Menopause Support (60 Capsules)",
+//         des : "This product incorporates natural soy isoflavones to provide holistic supplementation for a woman’s midlife years.",
+//         price : 500.00,
+//         strprice : 540.00,
+//        },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/navgrah/diabcure_m_v1.png",
+//         name : "Diabcure Morning 30 Capsules",
+//         des : "Men with diabetes may have a decreased sex drive, ED & poor muscle strength. Women with diabetes can have symptoms such as UTI, dry, itchy skin. Diabcure Morning Capsules help keep the sugar levels balanced and keep you active the whole day.",
+//         price : 630.00,
+//         strprice : 700.00,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/namhya/lungs_cleanse_v1.png",
+//         name : "Namhya Lung Cleanse Tea 100g",
+//         des : "In our daily lifestyle, we often forget to take care of ourselves. Namhya has come off with a range of herbal teas that are made with ancient Indian recipes and packed with natural herbs to improve your overall health with just a sip.",
+//         price : 349.00,
+//         strprice :589.00 ,
+//         },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2273_PD_Image1.jpg",
+//         name : "Navgrah Immunity Builder Drops (30 ml)",
+//         des : "NavGrah Immunity Builder Drops contain ayurvedic herbs which help in building strong immunity. It has coupled the study of both Astrology and Ayurveda with Modern Medical Science to bring the maximum out of this product.",
+//         price : 399.00,
+//         strprice : 499.00,
+//         },
+// ]
+
+let content = document.getElementById("content");
+
+let url = `https://apilybrate.herokuapp.com/vitaminandsupplementproducts`;
+
+async function getProducts() {
+  try {
+    let VitaminAndSupplement = await fetchProducts(url); 
+    console.log(VitaminAndSupplement)
+    displayContent(VitaminAndSupplement,content);
+  } catch (error) {
+    console.log(error);
+  }
+}
+getProducts();
 
 
+function fetchProducts(url) {
+    return fetch(url) 
+      .then(function (res) {
+        return res.json(); 
+      })
+      .then(function (res) {
+        return res; 
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
 
 
 
@@ -242,17 +269,20 @@ responsiveSlider();
 
 
 
-document.getElementById("secondNav").innerHTML = secondNav("Food & Drink");
+document.getElementById("secondNav").innerHTML = secondNav("Vitamin & Supplement");
 
-document.getElementById("low").addEventListener("click", function(){
+document.getElementById("low").addEventListener("click", async function(){
+    let VitaminAndSupplement= await fetchProducts(url);
     sort("low", VitaminAndSupplement,content)
 })
 
-document.getElementById("high").addEventListener("click", function(){
+document.getElementById("high").addEventListener("click", async function(){
+    let VitaminAndSupplement= await fetchProducts(url);
     sort("high",VitaminAndSupplement,content)
 })
 
-document.getElementById("popular").addEventListener("click", function(){
+document.getElementById("popular").addEventListener("click", async function(){
+    let VitaminAndSupplement= await fetchProducts(url);
     sort("p",VitaminAndSupplement,content)
 })
 
@@ -261,13 +291,10 @@ document.getElementById("popular").addEventListener("click", function(){
 
 
 
-    
-
-
-    let content = document.getElementById("content");
+    // let content = document.getElementById("content");
 
     
-    displayContent(VitaminAndSupplement,content);
+    // displayContent(VitaminAndSupplement,content);
 
     
 authenticate();
