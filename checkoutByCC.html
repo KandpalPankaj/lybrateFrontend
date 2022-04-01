@@ -84,7 +84,6 @@
 
         let res = await fetch(url, { method: "POST" });
         data = await res.json();
-        console.log(data.otp);
       } else {
         let otpEntered = otpInput.value;
         if (data.otp != otpEntered) {
