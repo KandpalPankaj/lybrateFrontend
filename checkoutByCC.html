@@ -72,9 +72,11 @@
   let c=0;
   async function proceed() {
     try {
+
       let otpInput = document.getElementById("otp");
      
       if (!otpInput) {
+        alert("Check your registered email for one time password.")
         otpInput = document.createElement("input");
         otpInput.type = "number";
         otpInput.placeholder = "Enter Otp";
@@ -82,7 +84,7 @@
         otpInput.className="type"
         document.getElementById("otpDiv").append(otpInput);
 
-        let url = "http://localhost:5000/checkoutOtpMail";
+        let url = "https://apilybrate.herokuapp.com/checkoutOtpMail";
 
         let res = await fetch(url, { method: "POST" });
         data = await res.json();
