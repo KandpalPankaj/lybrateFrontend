@@ -76,58 +76,87 @@ import {displayContent, sort} from "./scripts/categoryAppendSort.js"
 import footer from "./components/footer.js"
     document.getElementById("footer").innerHTML=footer();
 
-var WeightManagement = [
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/navgrah/slim_up_v1.png",
-        name : "NavGrah Slim Up For Weight Loss - 30 Capsules",
-        des : "NavGrah Weight Management Capsule Slim Up helps not just to make you lose stubborn belly fat but also keeps you away from numerous lifestyle diseases. It also helps in boosting metabolism, removing water retention, flushing out toxins, improving digestion, stress reduction.",
-        price : 630.00,
-        strprice : 700.00,
-    },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/navgrah/tone_up_v1.png",
-        name : "NavGrah Tone Up For Weight Loss - 30 Capsules",
-        des : "Excess belly fat is related to many serious health conditions including stroke, heart disease, obesity, diabetes, stroke and even some types of cancers. NavGrah Tone Up not only provides the interim solution to reduce weight but also helps cure the diseases caused by being overweight.",
-        price : 630.00,
-        strprice : 700.00,
-    },
-        {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/711_PD_Image1.jpg",
-        name : "Farm Naturelle Organic Apple Cider Vinegar with Ginger and Turmeric - 500ml",
-        des : "Apple cider Vinegar by Farm Naturelle is 100% natural, unpasteurised and unfiltered. It has multiple health benefits.",
-        price : 500.00,
-        strprice : 625.00,
-    },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/purenutri/prod_2021-04-22/applecider-v1.webp",
-        name : "Apple Cider Vinegar Plus 90 Tablets",
-        des : "t is the 100% vegetarian supplements made from the finest quality and organic apples providing 300mg of all-natural apple cider vinegar powder along with other natural ingredients that give a natural boost to your health with taste",
-        price : 760.00,
-        strprice : 1199.00,
-    },
-        {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/1604_PD_Image1.jpg",
-        name : "Lipoherb: Ayurvedic Medicine for Weight Loss & Cholesterol – (Pack of 3)",
-        des : "Dr Vaidya’s Lipoherb is 100% natural medicine to aid in healthy weight loss and management of cholesterol levels.",
-        price : 450.00,
-        strprice : 540.00,
-    },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/760_PD_Image1.jpg",
-        name : "Farm Naturelle Organic Apple Cider Vinegar with Cinnamon and Fenugreek - 500ml",
-        des : "Apple cider Vinegar by Farm Naturelle is 100% natural, unpasteurised and unfiltered. It maintains blood pressure and helps in weight loss.",
-        price : 480.00,
-        strprice : 625.00,
-    },
-    {
-        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/1605_PD_Image1.jpg",
-        name : "Lipoherb: Ayurvedic Medicine for Weight Loss & Cholesterol – (Pack of 3 x 2)",
-        des : "Dr Vaidya’s Lipoherb is 100% natural medicine to aid in healthy weight loss and management of cholesterol levels.",
-        price : 800.00,
-        strprice : 1080.00,
-    },
-]
+// var WeightManagement = [
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/navgrah/slim_up_v1.png",
+//         name : "NavGrah Slim Up For Weight Loss - 30 Capsules",
+//         des : "NavGrah Weight Management Capsule Slim Up helps not just to make you lose stubborn belly fat but also keeps you away from numerous lifestyle diseases. It also helps in boosting metabolism, removing water retention, flushing out toxins, improving digestion, stress reduction.",
+//         price : 630.00,
+//         strprice : 700.00,
+//     },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/navgrah/tone_up_v1.png",
+//         name : "NavGrah Tone Up For Weight Loss - 30 Capsules",
+//         des : "Excess belly fat is related to many serious health conditions including stroke, heart disease, obesity, diabetes, stroke and even some types of cancers. NavGrah Tone Up not only provides the interim solution to reduce weight but also helps cure the diseases caused by being overweight.",
+//         price : 630.00,
+//         strprice : 700.00,
+//     },
+//         {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/711_PD_Image1.jpg",
+//         name : "Farm Naturelle Organic Apple Cider Vinegar with Ginger and Turmeric - 500ml",
+//         des : "Apple cider Vinegar by Farm Naturelle is 100% natural, unpasteurised and unfiltered. It has multiple health benefits.",
+//         price : 500.00,
+//         strprice : 625.00,
+//     },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/purenutri/prod_2021-04-22/applecider-v1.webp",
+//         name : "Apple Cider Vinegar Plus 90 Tablets",
+//         des : "t is the 100% vegetarian supplements made from the finest quality and organic apples providing 300mg of all-natural apple cider vinegar powder along with other natural ingredients that give a natural boost to your health with taste",
+//         price : 760.00,
+//         strprice : 1199.00,
+//     },
+//         {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/1604_PD_Image1.jpg",
+//         name : "Lipoherb: Ayurvedic Medicine for Weight Loss & Cholesterol – (Pack of 3)",
+//         des : "Dr Vaidya’s Lipoherb is 100% natural medicine to aid in healthy weight loss and management of cholesterol levels.",
+//         price : 450.00,
+//         strprice : 540.00,
+//     },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/760_PD_Image1.jpg",
+//         name : "Farm Naturelle Organic Apple Cider Vinegar with Cinnamon and Fenugreek - 500ml",
+//         des : "Apple cider Vinegar by Farm Naturelle is 100% natural, unpasteurised and unfiltered. It maintains blood pressure and helps in weight loss.",
+//         price : 480.00,
+//         strprice : 625.00,
+//     },
+//     {
+//         image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/1605_PD_Image1.jpg",
+//         name : "Lipoherb: Ayurvedic Medicine for Weight Loss & Cholesterol – (Pack of 3 x 2)",
+//         des : "Dr Vaidya’s Lipoherb is 100% natural medicine to aid in healthy weight loss and management of cholesterol levels.",
+//         price : 800.00,
+//         strprice : 1080.00,
+//     },
+// ]
 
+
+let content = document.getElementById("content");
+
+let url = `https://apilybrate.herokuapp.com/weightmanegmentproducts`;
+
+async function getProducts() {
+  try {
+    let WeightManagement = await fetchProducts(url); 
+    console.log(WeightManagement)
+    displayContent(WeightManagement,content);
+  } catch (error) {
+    console.log(error);
+  }
+}
+getProducts();
+
+
+function fetchProducts(url) {
+    return fetch(url) 
+      .then(function (res) {
+        return res.json(); 
+      })
+      .then(function (res) {
+        return res; 
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
 
 
 let header = document.getElementById("header");
@@ -179,15 +208,18 @@ responsiveSlider();
 
 document.getElementById("secondNav").innerHTML = secondNav("Weight Management");
 
-document.getElementById("low").addEventListener("click", function(){
+document.getElementById("low").addEventListener("click", async function(){
+    let WeightManagement= await fetchProducts(url);
     sort("low", WeightManagement,content)
 })
 
-document.getElementById("high").addEventListener("click", function(){
+document.getElementById("high").addEventListener("click", async function(){
+    let WeightManagement= await fetchProducts(url);
     sort("high",WeightManagement,content)
 })
 
-document.getElementById("popular").addEventListener("click", function(){
+document.getElementById("popular").addEventListener("click", async function(){
+    let WeightManagement= await fetchProducts(url);
     sort("p",WeightManagement,content)
 })
 
@@ -196,13 +228,11 @@ document.getElementById("popular").addEventListener("click", function(){
 
 
 
-    
 
-
-    let content = document.getElementById("content");
+    // let content = document.getElementById("content");
 
     
-    displayContent(WeightManagement,content);
+    // displayContent(WeightManagement,content);
 
     
 
