@@ -50,7 +50,7 @@ let category=document.getElementById("category");
 category.innerHTML=""
 category.style= "background-color: white;"
 
-
+let parent=document.getElementById("rightBox")
 let container=document.getElementById("container")
 
 let cartarr=JSON.parse(localStorage.getItem("cartArr"))||[];
@@ -93,10 +93,10 @@ if(cartarr.length===0)
     localStorage.setItem("payablePrice",0);
 }
 else{
-    
+   
 
     appendCart(cartarr)
-    let parent=document.getElementById("rightBox")
+   
     appendOrderSummary(parent,cartarr);
     localStorage.setItem("payablePrice",JSON.stringify(appendOrderSummary(parent,cartarr)));
 }
@@ -151,10 +151,9 @@ function appendCart(cartarr)
             price.textContent="₹"+((+value)*(+firstPrice));
             stprice.textContent="₹"+((+value)*(+firstStprice));
             el.price=((+value)*(+firstPrice));
-            el.stprice=((+value)*(+firstStprice))
-
-            
-            
+        el.stprice=((+value)*(+firstStprice));
+        appendOrderSummary(parent,cartarr);
+        localStorage.setItem("payablePrice",JSON.stringify(appendOrderSummary(parent,cartarr)));
         }
         let button1=document.createElement("button");
         button1.textContent="Remove";
@@ -164,7 +163,7 @@ function appendCart(cartarr)
             document.getElementById("leftBox").innerHTML="";
             let index = cartarr.indexOf(el);
             cartarr.splice(index,1)
-            console.log(' cartarr', cartarr);
+            // console.log(' cartarr', cartarr);
             localStorage.setItem("cartArr",JSON.stringify(cartarr));
             appendCart(cartarr);
             window.location.href="viewcart.html";

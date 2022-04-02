@@ -1,6 +1,9 @@
-function appendOrderSummary(parent,cartarr){
 
-    let maindiv=document.createElement("div");
+let maindiv=document.createElement("div");
+function appendOrderSummary(parent,cartarr){
+    maindiv.innerHTML=""
+    
+    
     maindiv.id="maindiv"
     
     let div=document.createElement("div");
@@ -26,7 +29,9 @@ function appendOrderSummary(parent,cartarr){
     let sum1=0;
     for(let i=0;i<cartarr.length;i++)
     {
-        sum1+=+cartarr[i].stprice;
+        
+        sum1+=(+cartarr[i].stprice || +cartarr[i].strprice);
+      
     }
     price.textContent="₹"+sum1
     
@@ -46,7 +51,8 @@ function appendOrderSummary(parent,cartarr){
     let sum2=0;
     for(let i=0;i<cartarr.length;i++)
     {
-        sum2+=(+cartarr[i].stprice)-(+cartarr[i].price);
+        sum2+=(+cartarr[i].stprice || +cartarr[i].strprice)-(+cartarr[i].price);
+        
     }
    
     
@@ -72,13 +78,14 @@ function appendOrderSummary(parent,cartarr){
     amountPayable.textContent="Amount Payable";
     let payablePrice=document.createElement("div");
     payablePrice.id="payablePrice"
-    payablePrice="₹"+sum3
+    payablePrice="₹"+sum3;
+   
     
     let image=document.createElement("img");
     image.src="./images/ordersummary.png";
     image.id="image"
-    
-    mrpDiv.append(totalMrp,items,)
+    console.log(price)
+    mrpDiv.append(totalMrp,items)
     totalMrpDiv.append(mrpDiv,price)
     shipping.append(charges,charge)
     dis.append(discount,discountPrice)
