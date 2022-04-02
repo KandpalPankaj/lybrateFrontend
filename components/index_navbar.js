@@ -58,4 +58,4 @@ function indexNavbar() {
     <a href="#">Gold Membership</a>
 </div>`
 }
-export default indexNavbar; 
+export {indexNavbar}; 
