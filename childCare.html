@@ -75,6 +75,7 @@ import {displayContent, sort} from "./scripts/categoryAppendSort.js"
 import footer from "./components/footer.js"
     document.getElementById("footer").innerHTML=footer();
 
+let cartArr=JSON.parse(localStorage.getItem("cartArr"))||[];
 
 
 
@@ -111,6 +112,18 @@ function fetchProducts(url) {
 let header = document.getElementById("header");
 
 header.innerHTML = goodkartHeader();
+
+
+let cartdiv=document.getElementById("cartdiv");
+console.log(cartArr.length)
+let cartsize=document.createElement("div");
+cartsize.id="cartsize";
+cartsize.textContent=`${cartArr.length}`
+cartdiv.append(cartsize);
+
+
+
+
 
 dropDown();
 

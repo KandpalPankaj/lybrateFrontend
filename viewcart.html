@@ -54,7 +54,7 @@ category.style= "background-color: white;"
 let container=document.getElementById("container")
 
 let cartarr=JSON.parse(localStorage.getItem("cartArr"))||[];
-console.log(cartarr)
+// console.log(typeof cartarr[2].strprice)
 
 let cartdiv=document.getElementById("cartdiv");
 
@@ -110,7 +110,7 @@ function appendCart(cartarr)
         
         let div=document.createElement("div");
         let image=document.createElement("img");
-        image.src=el.img;
+        image.src=el.img || el.image;
         image.id="prodImg"
         let name=document.createElement("div");
         name.textContent=el.name;
@@ -120,8 +120,8 @@ function appendCart(cartarr)
         let firstPrice=el.price;
         price.id="prodPrice";
         let stprice=document.createElement("div");
-        stprice.textContent="₹"+el.stprice;
-        let firstStprice=el.stprice;
+        stprice.textContent="₹"+( +el.stprice || +el.strprice);
+        let firstStprice= (+el.stprice || +el.strprice);
         stprice.id="stprice";
         let quantity=document.createElement("div");
         quantity.textContent="Quantity"

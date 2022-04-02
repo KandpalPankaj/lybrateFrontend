@@ -4,6 +4,7 @@
 
 
     
+let cartArr=JSON.parse(localStorage.getItem("cartArr"))||[];
 
 
     let displayContent = (data,parent) => {
@@ -37,7 +38,11 @@
             priceImagDiv.append(img, div1);
 
             let btn = document.createElement("button");
-            btn.innerText = "Add To Cart"
+            btn.innerText = "Add To Cart";
+            btn.addEventListener("click", ()=>{
+                addToCart(el);
+            });
+
 
             div.append(priceImagDiv, btn);
             parent.append(div)
@@ -45,7 +50,16 @@
         })
     }
 
+let addToCart = (el)=>{
 
+cartArr=JSON.parse(localStorage.getItem("cartArr"))||[];
+
+cartArr.push(el);
+localStorage.setItem("cartArr",JSON.stringify(cartArr));
+
+cartsize.textContent=`${cartArr.length}`
+
+}
 
 
 
