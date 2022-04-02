@@ -69,9 +69,11 @@
   let cartarr = JSON.parse(localStorage.getItem("cartArr")) || [];
   console.log(cartarr);
   let data;
+  let c=0;
   async function proceed() {
     try {
       let otpInput = document.getElementById("otp");
+     
       if (!otpInput) {
         otpInput = document.createElement("input");
         otpInput.type = "number";
@@ -85,9 +87,24 @@
         let res = await fetch(url, { method: "POST" });
         data = await res.json();
       } else {
+        
         let otpEntered = otpInput.value;
         if (data.otp != otpEntered) {
-          alert("Incorrect OTP Entered!, Please Enter Correct OTP");
+          c++;
+          if(c==1)
+          {
+            alert("Incorrect OTP Entered! 2 chances left, Please Enter Correct OTP");
+          }
+          else if(c==2)
+          {
+            alert("Incorrect OTP Entered! 1 chance left, Please Enter Correct OTP");
+          }
+          else if(c===3)
+          {
+            c=0;
+            alert("Incorrect OTP Entered! Transaction failed, Try again");
+            window.location.href="checkoutByCC.html"
+          }
         } else {
           let card = document.getElementById("card").value;
           let expiry = document.getElementById("expiry").value;
