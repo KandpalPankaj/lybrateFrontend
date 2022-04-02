@@ -10,8 +10,10 @@
         flex: 5;
         margin-left: 80px;
        margin-top: 50px;
+       
     }
 #leftBox>div{
+    
     display: flex;
     border: 1px solid #eeeeee;
     background-color: white;
@@ -43,6 +45,7 @@ a{
     font-size: 24px;
     font-weight:500;
     text-align: center;
+    
 }
 #p2{
     margin-top: -20px;
@@ -53,25 +56,32 @@ a{
     width: 80px;
     height: 50px;
     margin: 15px 0px;
+    
 }
 #prodName{
     margin-top: 25px;
     width: 370px;
+    
 }
 #prodPrice{
     color: #c82506;
     margin-top: 25px;
     font-size: 18px;
+    width: 60px;
+    /* border: 1px solid red; */
 }
 #stprice{
     margin-top: 25px;
     font-size: 14px;
     margin-left: 5px;
+    /* border: 1px solid red; */
+    width: 60px;
     text-decoration:line-through;
 }
 #quantity{
     margin: 25px 10px 0px 70px;
     font-size: 12px;
+    /* border: 1px solid red; */
 }
 #select{
     height: 30px;
@@ -86,6 +96,8 @@ a{
     margin: 25px;
     background-color: white;
     border: 1px solid;
+    cursor: pointer;
+    
 }
 #button2{
     width: 170px;
