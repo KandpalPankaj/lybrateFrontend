@@ -99,6 +99,8 @@ function appendOrderSummary(parent,cartarr){
     div.append(order,mrpBox,payable)
     maindiv.append(div,image)
     parent.append(maindiv);
+    console.log(sum3)
     return sum3;
+
     }
     export default appendOrderSummary

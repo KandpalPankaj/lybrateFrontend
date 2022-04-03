@@ -152,6 +152,7 @@ function appendCart(cartarr)
             stprice.textContent="₹"+((+value)*(+firstStprice));
             el.price=((+value)*(+firstPrice));
         el.stprice=((+value)*(+firstStprice));
+        localStorage.setItem("cartArr",JSON.stringify(cartarr))
         appendOrderSummary(parent,cartarr);
         localStorage.setItem("payablePrice",JSON.stringify(appendOrderSummary(parent,cartarr)));
         }
