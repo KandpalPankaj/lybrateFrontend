@@ -74,7 +74,7 @@
     try {
 
       let otpInput = document.getElementById("otp");
-     
+
       if (!otpInput) {
         alert("Check your registered email for one time password.")
         otpInput = document.createElement("input");
@@ -89,7 +89,7 @@
         let res = await fetch(url, { method: "POST" });
         data = await res.json();
       } else {
-        
+
         let otpEntered = otpInput.value;
         if (data.otp != otpEntered) {
           c++;
@@ -122,11 +122,14 @@
             let icon = document.createElement("i");
             icon.className = "fas fa-spinner fa-spin";
             div.append(icon);
-            function test() {
+            async function test() {
+              let url = "https://apilybrate.herokuapp.com/finalMail";
+              let res = await fetch(url, { method: "POST" });
+              data = await res.json();
               alert("Hurray! your order has been successfully placed.");
               cartarr = [];
               localStorage.setItem("cartArr", JSON.stringify(cartarr));
-
+              
               window.location.href = "goodkart.html";
             }
 
@@ -150,16 +153,4 @@
   Transaction.textContent = `Transaction id ${id}`;
   div.append(payable, Transaction);
 
-  async function sendOtp() {
-    let url = "http://localhost:5000/checkoutOtpMail";
-
-    try {
-      let res = await fetch(url, { method: "POST" });
-      data = await res.json();
-      console.log(data.otp);
-      return data;
-    } catch (err) {
-      console.log(err);
-    }
-  }
 </script>
