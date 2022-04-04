@@ -15,13 +15,14 @@ I worked on this project during unit-4 construct week at Masai School with the h
 Javascript, HTML, CSS , MongoDB , Postman , Node.js
 
 ## Important Links
-
-<a href="http://librate.netlify.app/">Netlify link</a>
+<a href="http://librate.netlify.app/">Netlify</a>
 <br>
-<a href="https://github.com/mohammad-atique/lybratebackend">Backend repository link</a>
+<a href="https://github.com/mohammad-atique/lybratebackend">Backend repository</a>
 <br>
-<a href="https://medium.com/@minakshikalambe10/fourth-unit-project-lybrate-com-8ba50892ada8">Project blog link</a>
-
+<a href="https://medium.com/@minakshikalambe10/fourth-unit-project-lybrate-com-8ba50892ada8">Project blog</a>
+<br>
+<a href="https://drive.google.com/file/d/1ttbF-b5iQDKb68cnqOUwn0GrYHLBHW5P/view?usp=sharing
+">Project presentation</a>
 ## Collaborators
 
 <a href="https://github.com/mohammad-atique">Mohammad atique</a><br>
