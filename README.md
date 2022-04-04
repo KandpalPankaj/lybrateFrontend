@@ -14,7 +14,7 @@ I worked on this project during unit-4 construct week at Masai School with the h
 
 Javascript, HTML, CSS , MongoDB , Postman , Node.js
 
-## Deplyement Link
+## Important Links
 
 <a href="http://librate.netlify.app/">Netlify link</a>
 <br>
