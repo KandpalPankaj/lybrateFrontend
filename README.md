@@ -16,6 +16,8 @@ Javascript, HTML, CSS , MongoDB , Postman , Node.js
 ## Deplyement Link
 
 <a href="http://librate.netlify.app/">Netlify link</a>
+<a href="https://github.com/mohammad-atique/lybratebackend">Backend repo link</a>
+<a href="https://medium.com/@minakshikalambe10/fourth-unit-project-lybrate-com-8ba50892ada8">Project blog link</a>
 
 ## Collaborators
 
@@ -50,7 +52,7 @@ Checkout page with total amount of all the cart products and transaction id.
 
 - OTP based payment process.
 - Address page.
-- Sorting product feature based price and popularity.
+- Sorting product feature based on price and popularity.
 - Cart page/Empty cart page.
 - User get a thankyou mail after successfull payment.
 
