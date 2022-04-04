@@ -23,8 +23,8 @@ Javascript, HTML, CSS , MongoDB , Postman , Node.js
 
 ## Collaborators
 
-<a href="https://github.com/mohammad-atique">Mohammad atique</a>
-<a href="https://github.com/minakshikalambe">Minakshi kalambe</a>
+<a href="https://github.com/mohammad-atique">Mohammad atique</a><br>
+<a href="https://github.com/minakshikalambe">Minakshi kalambe</a><br>
 <a href="https://github.com/Soumyaranjankalia">Soumya ranjan kalia</a>
 
 ## Screenshots
