@@ -65,4 +65,4 @@ Checkout page with total amount of all the cart products and transaction id.
 - Integrated all the pages successfully,
 - Developed the Payment page,
 - Built Add to cart functionality, product remove button ,
-- Built OTP based payment process,
+- Built OTP based payment process.
